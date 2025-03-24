@@ -28,13 +28,14 @@ const AllTheBooks = () => {
       </Form.Group>
 
       {}
-      <Row className="g-4">
-        {filteredBooks.map((book) => (
-          <Col key={book.asin} xs={6} md={4} lg={3}>
-            <SingleBook book={book} />
-          </Col>
-        ))}
-      </Row>
+      <Row>
+  {books.map((book) => (
+    <Col key={book.asin} xs={6} md={4} lg={3}>
+      <SingleBook book={book} />
+    </Col>
+  ))}
+</Row>
+
     </Container>
   );
 };
